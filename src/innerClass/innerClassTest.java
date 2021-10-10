@@ -34,6 +34,23 @@ public class innerClassTest {
             time.start();
         }
 
+        /**
+         * 匿名内部类
+         */
+
+        public void start1(){
+            //没有声明类名
+            var listener = new ActionListener(){
+                @Override
+                public void actionPerformed(ActionEvent event){
+                    System.out.println("At the tone, the time is " + Instant.ofEpochMilli(event.getWhen()));
+                    if(beep) Toolkit.getDefaultToolkit().beep();
+                }
+            };
+            var time = new Timer(interval,listener);
+            time.start();
+        }
+
         public class TimePrinter implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent event){
