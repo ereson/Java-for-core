@@ -1,6 +1,5 @@
 package streams;
 
-import java.io.File;
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.FileSystems;
